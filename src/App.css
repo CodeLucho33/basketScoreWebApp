@@ -1,0 +1,29 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+ */
+
+ /* INITIAL FORM************************************************************************* */
+ /* ***************************************************************************INITIAL FORM */
+
+ .initial-form{
+ width: 30%;
+ margin: 15% auto;
+ font-size: 1.5rem;
+ }
+ .btn-form-initial{
+  width: 30%;
+  font-size: 1em;
+  margin-left: 30%;
+  margin-top: 10%;
+  border: none;
+  padding: .2em;
+ 
+ }
+ .btn-form-initial{
+  cursor: pointer;
+ }
