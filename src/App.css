@@ -14,6 +14,15 @@
  width: 30%;
  margin: 15% auto;
  font-size: 1.5rem;
+ border: 2px solid purple ;
+ padding: 1em ;
+ border-radius: 1em;
+ display: flex;
+ flex-direction: column;
+ font-weight: bold;
+ }
+ .initial-form:hover{
+background-color: purple;
  }
  .btn-form-initial{
   width: 30%;
@@ -22,7 +31,7 @@
   margin-top: 10%;
   border: none;
   padding: .2em;
- 
+  font-weight: bold;
  }
  .btn-form-initial{
   cursor: pointer;
