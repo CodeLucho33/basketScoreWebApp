@@ -10,17 +10,31 @@ export default function App() {
   const [player, setPlayer] = useState({
     nameTeamOne: '',
     nameTeamTwo: '',
-    scoreOne:0,
-    scoreTwo:0,
+    scoreOne: 0,
+    scoreTwo: 0,
     hasData: false
 
 
   })
 
-  function addPoints(){
-alert(addPoints)
+  function addPointsTeamTwo(n) {
+    setPlayer(prevPayer => ({
+      ...prevPayer,
+      scoreTwo: prevPayer.scoreTwo + n
+    }))
   }
-    function handleSubmit() {
+
+  function addPointsTeamOne(n) {
+    setPlayer(prevPayer => ({
+      ...prevPayer,
+      scoreOne: prevPayer.scoreOne + n,
+
+
+    }))
+
+
+  }
+  function handleSubmit() {
     let formGameEl = document.getElementById('form-game')
     let dataGame = new FormData(formGameEl)
     let nameOne = dataGame.get('name-one')
@@ -41,9 +55,10 @@ alert(addPoints)
     <>
       {player.hasData === false ? <FormGame onSubmit={handleSubmit} /> : <Player nameTeamOne={player.nameTeamOne}
         nameTeamTwo={player.nameTeamTwo}
-        score1={player.scoreOne} 
+        score1={player.scoreOne}
         score2={player.scoreTwo}
-        onClick={addPoints}/>}
+        onClickOne={addPointsTeamOne}
+        onClickTwo={addPointsTeamTwo} />}
     </>
   )
 }

@@ -1,74 +1,74 @@
- 
+ /* INITIAL FORM************************************************************************* */
+ /* ***************************************************************************INITIAL FORM */
 
+ .initial-form {
+   width: 30%;
+   margin: 15% auto;
+   font-size: 1.5rem;
+   border: 2px solid purple;
+   padding: 1em;
+   border-radius: 1em;
+   display: flex;
+   flex-direction: column;
+   font-weight: bold;
+ }
 
+ .initial-form:hover {
+   background-color: purple;
+ }
 
-/* INITIAL FORM************************************************************************* */
-/* ***************************************************************************INITIAL FORM */
+ .btn-form-initial {
+   width: 30%;
+   font-size: 1em;
+   margin-left: 30%;
+   margin-top: 10%;
+   border: none;
+   padding: .2em;
+   font-weight: bold;
+ }
 
-.initial-form {
-  width: 30%;
-  margin: 15% auto;
-  font-size: 1.5rem;
-  border: 2px solid purple;
-  padding: 1em;
-  border-radius: 1em;
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-}
+ .btn-form-initial {
+   cursor: pointer;
+ }
 
-.initial-form:hover {
-  background-color: purple;
-}
+ /* ***************BOARD POINTS******************* */
+ /* ********************************************** */
 
-.btn-form-initial {
-  width: 30%;
-  font-size: 1em;
-  margin-left: 30%;
-  margin-top: 10%;
-  border: none;
-  padding: .2em;
-  font-weight: bold;
-}
+ .content {
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+ }
 
-.btn-form-initial {
-  cursor: pointer;
-}
+ .score {
+   width: 100%;
+   height: 50%;
+   background-color: black;
+   border-radius: 1em;
+   font-family: "Orbitron", sans-serif;
 
-/* ***************BOARD POINTS******************* */
-/* ********************************************** */
+ }
 
-.content {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
+ .number-score {
 
-.score {
-  width: 100%;
-  height: 50%;
-  background-color: black;
-  border-radius: 1em;
-  font-family: "Orbitron", sans-serif;
+   color: red;
+   font-weight: bold;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 7rem;
+ }
 
-}
+ .btns-for-add-points {
 
-.number-score {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 1em;
+ }
 
-  color: red;
-  font-weight: bold;
-  text-align: center;
-  border: 2px solid red;
-
-}
-
-.btns-for-add-points {
-  
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1em;
-}
-.btns{
-  font-family: "Orbitron", sans-serif;
-  font-size: 2rem;
-}
+ .btns {
+   font-family: "Orbitron", sans-serif;
+   font-size: 2rem;
+ }

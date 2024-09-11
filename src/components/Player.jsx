@@ -12,9 +12,9 @@ export function Player(props) {
                         <p className="number-score">{props.score1}</p>
                     </div>
                     <div className="btns-for-add-points">
-                        <button onClick={()=>props.onClick(1)} className="btns">+1</button>
-                        <button onClick={()=>props.onClick(2)} className="btns">+2</button>
-                        <button onClick={()=>props.onClick(3)} className="btns">+3</button>
+                        <button onClick={() => props.onClickOne(1)} className="btns">+1</button>
+                        <button onClick={() => props.onClickOne(2)} className="btns">+2</button>
+                        <button onClick={() => props.onClickOne(3)} className="btns">+3</button>
 
                     </div>
 
@@ -25,9 +25,9 @@ export function Player(props) {
                         <p className="number-score">{props.score2}</p>
                     </div>
                     <div className="btns-for-add-points">
-                        <button onClick={()=>props.onClick(1)} className="btns">+1</button>
-                        <button onClick={()=>props.onClick(2)} className="btns">+2</button>
-                        <button onClick={()=>props.onClick(3)} className="btns">+3</button>
+                        <button onClick={() => props.onClickTwo(1)} className="btns">+1</button>
+                        <button onClick={() => props.onClickTwo(2)} className="btns">+2</button>
+                        <button onClick={() => props.onClickTwo(3)} className="btns">+3</button>
 
                     </div>
                 </div>
