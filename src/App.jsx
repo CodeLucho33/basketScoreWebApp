@@ -14,6 +14,7 @@ export default function App() {
     scoreTwo: 0,
     hasData: false
   })
+ 
 
   const [timeInput, setTimeInput] = useState("");
   const [timeLeft, setTimeLeft] = useState(0);
@@ -25,14 +26,33 @@ export default function App() {
     
   }
 
+  function deleteLastPointAddedOne(n){
+    
+    setPlayer(prevPlayer =>({
+      ...prevPlayer,
+      scoreOne: prevPlayer.scoreOne -n
+    }))
+  }
+  
+  
+  function deleteLastPointAddedTwo(n){
+   
+    setPlayer(prevPlayer =>({
+      ...prevPlayer,
+      scoreTwo: prevPlayer.scoreTwo -n
+    }))
+  }
+  
   function addPointsTeamTwo(n) {
+    
     setPlayer(prevPayer => ({
       ...prevPayer,
       scoreTwo: prevPayer.scoreTwo + n
     }))
   }
-
+  
   function addPointsTeamOne(n) {
+    
     setPlayer(prevPayer => ({
       ...prevPayer,
       scoreOne: prevPayer.scoreOne + n,
@@ -91,6 +111,9 @@ export default function App() {
           onClickTwo={addPointsTeamTwo}
           time={timeLeft} 
           isActive={isRunning}
+          deletePointsOne={deleteLastPointAddedOne}
+          deletePointsTwo={deleteLastPointAddedTwo}
+         
           />
       }
     </>
