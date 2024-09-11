@@ -43,11 +43,11 @@ This project is a dynamic basketball scoreboard built from scratch using **React
 5. Access the app at `http://localhost:5173`.
 
 ### Planned Functionalities:
-- **Score Tracking**: Allows teams to score points using +1, +2, and +3 buttons.
-- **Undo Last Action**: Revert the last point added, useful for correcting mistakes.
+- **Score Tracking**: Allows teams to score points using +1, +2, and +3 buttons. ✅
+- **Undo Last Action**: Revert the last point added, useful for correcting mistakes. ✅
 - **Timer**: Add a countdown or stopwatch-like feature to track the duration of the game.
 - **Reset Button**: Reset the scoreboard to zero for a new game.
-- **Customizable Team Names**: Personalize the team labels for any game.
+- **Customizable Team Names**: Personalize the team labels for any game.✅
 - **Fouls Counter**: Track how many fouls each team has committed during the game.
 - **Score History**: View a log of all points added throughout the game.
 - **Responsive Design**: Adapt to mobile devices with a clean, intuitive interface.
