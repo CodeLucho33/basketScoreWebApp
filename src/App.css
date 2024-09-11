@@ -72,3 +72,10 @@
    font-family: "Orbitron", sans-serif;
    font-size: 2rem;
  }
+
+ .count-reverse{
+  color:green;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  font-size: 10rem;
+ }
