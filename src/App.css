@@ -73,9 +73,65 @@
    font-size: 2rem;
  }
 
- .count-reverse{
-  color:green;
-  font-family: "Orbitron", sans-serif;
-  font-weight: bold;
-  font-size: 10rem;
+
+
+
+
+ /* **********************TIMER****************************** */
+ /* ************************************************************** */
+
+ .btn-stop,
+ .btn-reverse,
+ .img-stop,
+ .img-reverse {
+   border: none;
+   width: 20%;
+
+ }
+
+ .timer-stop,
+ .timer-reverse {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   font-family: "Orbitron", sans-serif;
+ }
+
+ .text-time {
+   color: green;
+   font-size: 5rem;
+ }
+
+ /* *********************CONTENT FOULS**************************** */
+
+ .btns-fouls {
+   display: flex;
+   justify-content: space-around;
+ }
+
+ .foul {
+   width: 20%;
+   height: 30px;
+   border: none;
+   border-radius: .2em;
+ }
+
+ .foul:hover {
+   cursor: pointer;
+   border: 2px solid black;
+ }
+ .foul-red{
+  background-color: red;
+ }
+ .foul-yellow{
+  background-color: yellow;
+  
+ }
+
+ .fieldset{
+  border-radius: 1em;
+ }
+ .fieldset:hover{
+  background-color: whitesmoke;
  }

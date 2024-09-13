@@ -14,45 +14,64 @@ export default function App() {
     scoreTwo: 0,
     hasData: false
   })
- 
+
 
   const [timeInput, setTimeInput] = useState("");
   const [timeLeft, setTimeLeft] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
-  
+
+  function handleResetGame() {
+    setTimeLeft(timeInput);
+    setPlayer(prevState => ({
+      ...prevState,
+      scoreOne: 0,
+      scoreTwo: 0
+
+    }));
+  }
   function handleInputChange(e) {
     const reverseTimerEl = document.getElementById('reverse-timer').value
     setTimeInput(reverseTimerEl)
-    
+
+  }
+  function handleReset() {
+    setIsRunning(true)
   }
 
-  function deleteLastPointAddedOne(n){
-    
-    setPlayer(prevPlayer =>({
+  function handleStop() {
+    if (timeLeft !== 0) {
+      setIsRunning(false);
+    }
+
+
+  }
+  function deleteLastPointAddedOne(n) {
+
+    setPlayer(prevPlayer => ({
       ...prevPlayer,
-      scoreOne: prevPlayer.scoreOne -n
+      scoreOne: prevPlayer.scoreOne - n
     }))
   }
-  
-  
-  function deleteLastPointAddedTwo(n){
-   
-    setPlayer(prevPlayer =>({
+
+
+  function deleteLastPointAddedTwo(n) {
+
+    setPlayer(prevPlayer => ({
       ...prevPlayer,
-      scoreTwo: prevPlayer.scoreTwo -n
+      scoreTwo: prevPlayer.scoreTwo - n
     }))
   }
-  
+
   function addPointsTeamTwo(n) {
-    
+
     setPlayer(prevPayer => ({
       ...prevPayer,
       scoreTwo: prevPayer.scoreTwo + n
     }))
   }
-  
+
   function addPointsTeamOne(n) {
-    
+
     setPlayer(prevPayer => ({
       ...prevPayer,
       scoreOne: prevPayer.scoreOne + n,
@@ -71,9 +90,9 @@ export default function App() {
     if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
       setTimeLeft(timeInSeconds)
       setIsRunning(true);
-      
+
     }
-    
+
 
     setPlayer(prevPlayer => ({
 
@@ -99,22 +118,26 @@ export default function App() {
     <>
       {player.hasData === false ?
         <FormGame
-          onSubmit={handleSubmit}
-          onChange={handleInputChange}
-          
-        /> : <Player
+          form={handleSubmit}
+          valueTimer={handleInputChange}
+
+        /> :
+         <Player
           nameTeamOne={player.nameTeamOne}
           nameTeamTwo={player.nameTeamTwo}
           score1={player.scoreOne}
           score2={player.scoreTwo}
-          onClickOne={addPointsTeamOne}
-          onClickTwo={addPointsTeamTwo}
-          time={timeLeft} 
+          addPointsOne={addPointsTeamOne}
+          addPointsTwo={addPointsTeamTwo}
+          time={timeLeft}
           isActive={isRunning}
           deletePointsOne={deleteLastPointAddedOne}
           deletePointsTwo={deleteLastPointAddedTwo}
-         
-          />
+          btnStop={handleStop}
+          btnReset={handleReset}
+          btnResetGame={handleResetGame}
+
+        />
       }
     </>
   )

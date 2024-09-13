@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-export function FormGame({ onSubmit ,onChange}) {
+export function FormGame({ form ,valueTimer}) {
 
     return (
         <>
 
-            <form onSubmit={onSubmit} id="form-game" className='initial-form'>
+            <form onSubmit={form} id="form-game" className='initial-form'>
                 <label htmlFor="name-one">Name team ONE:</label><br />
                 <input type="text" id="name-one" name="name-one" required /><br />
                 <label htmlFor="name-two">Name team TWO:</label><br />
@@ -19,7 +19,7 @@ export function FormGame({ onSubmit ,onChange}) {
                 name="reverse-timer" 
                 min={1} 
                 
-                onChange={onChange}
+                onChange={valueTimer}
                 /><br/>
                 <button type="submit" className="btn-form-initial">Start Game!</button>
             </form>
